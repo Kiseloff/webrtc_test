@@ -1,0 +1,12 @@
+.idea
+*.yarn.lock
+package-lock.json
+
+
+*.log
+/log/*.log
+
+/node_modules/
+/tests_output/*.xml
+/screenshots/*.jpeg
+/tests/_*.js
