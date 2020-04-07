@@ -1,0 +1,37 @@
+{
+  "src_folders" : ["tests"],
+
+  "webdriver" : {
+    "start_process": true,
+    "server_path": "node_modules/chromedriver/lib/chromedriver/chromedriver.exe",
+    "port": 9515,
+    "cli_args": [
+      "--log-path=log/chromedriver.log",
+      "--log-level=INFO"
+    ]
+  },
+
+  "test_settings" : {
+    "default" : {
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "loggingPrefs": {
+          "driver": "INFO",
+          "server": "OFF",
+          "browser": "INFO"
+        },
+        "chromeOptions" : {
+          "args" : [
+            "deny-permission-prompts",
+            "use-fake-ui-for-media-stream",
+            "use-fake-device-for-media-stream",
+            "use-file-for-fake-video-capture=C:\\temp\\video\\1080p.mjpeg",
+            "use-file-for-fake-audio-capture=C:\\temp\\video\\audio.wav"
+          ]
+        },
+        "acceptSslCerts": true
+      }
+    }
+  }
+
+}
